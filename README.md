@@ -6,22 +6,19 @@ Este proyecto nos sirve para poder validar la API de la landing de OpenBank y ve
 - RestAssured 
 - Cucumber (BDD Gherkin)
 
----
-
 ## Getting Started
 
 1. Clone the repository:
 
-```bash
+bash
 (https://github.com/Rperaltar/Proyecto_OB.git)
 cd Proyecto_OB
-```
 
 2. Run tests with Maven:
 
-```bash
+bash
 mvn clean install
-```
+
 mvn test
 
 ##  Project Structure
@@ -33,12 +30,10 @@ Arquitectura Java API RestAssured With Cucumber
 - videoRecorder
 - log4j
 - TestNg.xml
-- 
-
-
+- POM
+  
 ##  Ejemplo de Test Java POO (RestAssured)
 
-```java
 JSONObject jsonObject  = new JSONObject();
         //GIVEN
         RestAssured.given()
@@ -56,7 +51,7 @@ JSONObject jsonObject  = new JSONObject();
 
 ## Gherkin Feature with Dynamic Data
 
-```Gherkin
+Gherkin
 Feature: Validar url OpenBank
 
   Scenario Outline: Validar que pueda llegar al enpoint
@@ -73,7 +68,7 @@ Feature: Validar url OpenBank
 
 Test reports generado por Maven Cucumber:
 
-```plaintext
+plaintext
 target/cucumber-report.html
-```
+
 
