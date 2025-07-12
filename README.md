@@ -1,6 +1,6 @@
 ## Validación API WebUp / OpenBank)
 
-Este proyecto nos sirve para poder validar la API de la landing de OpenBank y ver si esta disponible en la web
+Este proyecto nos sirve para poder validar la API de la landing de OpenBank y ver si esta disponible en la web:
 
 - JUnit (Unit Testing)
 - RestAssured 
@@ -13,8 +13,8 @@ Este proyecto nos sirve para poder validar la API de la landing de OpenBank y ve
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/gdiperna/ApiRestTest
-cd ApiRestTest
+(https://github.com/Rperaltar/Proyecto_OB.git)
+cd Proyecto_OB
 ```
 
 2. Run tests with Maven:
@@ -23,11 +23,18 @@ cd ApiRestTest
 mvn clean install
 ```
 mvn test
----
 
 ##  Project Structure
 
-Arquitectura Java API 
+Arquitectura Java API RestAssured With Cucumber 
+- Cucumber (BDD Gherkin / Junit)
+- ExtentReport
+- utils
+- videoRecorder
+- log4j
+- TestNg.xml
+- 
+
 
 ##  Ejemplo de Test Java POO (RestAssured)
 
@@ -38,10 +45,10 @@ JSONObject jsonObject  = new JSONObject();
                 .contentType(ContentType.JSON)
                 .body(jsonObject)
                 .log().all()
-                // WHEN
+         // WHEN
                 .when()
                 .get()
-                // THEN
+         // THEN
                 .then()
                 .log().all()
                 .extract().response();
@@ -49,7 +56,7 @@ JSONObject jsonObject  = new JSONObject();
 
 ## Gherkin Feature with Dynamic Data
 
-```gherkin
+```Gherkin
 Feature: Validar url OpenBank
 
   Scenario Outline: Validar que pueda llegar al enpoint
@@ -60,9 +67,7 @@ Feature: Validar url OpenBank
       | web                                   | status |
       | https://www.openbank.es               | 200    |
       | https://www.openbank.es/nohaynada     | 403    |
-```
 
----
 
 ## Cucumber Report
 
